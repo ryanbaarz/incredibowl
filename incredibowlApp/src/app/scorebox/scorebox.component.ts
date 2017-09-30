@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-scorebox',
@@ -75,5 +76,15 @@ export class ScoreboxComponent implements OnInit {
   ngOnInit() {
   }
 
+  testClick(){
+    this.recordBowl (5);
+  }
+
+  recordBowl(pinsDown : number){
+    console.log(pinsDown);
+    _.times(pinsDown, (n)=>{
+      console.log(n)
+    })
+  }
 
 }
