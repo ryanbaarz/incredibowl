@@ -1,0 +1,58 @@
+.scorebox-cont{
+  line-height:50px;
+  text-align: center;
+}
+.frame-cont{
+  border : 1px solid #444444;
+  border-left-width:0;
+  width:100px;
+  height: 100px;
+  float : left;
+  position:relative;
+  font-size:20px;
+}
+.frame-cont:first-child{
+  border-left-width:1px;
+}
+.score1-box{
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:50px;
+  right: 50px;
+
+}
+.score1-box.last{
+  right: 66px;
+  border-bottom:1px solid #444444;
+}
+.score2-box{
+  border : 1px solid #444444;
+  border-top-width: 0;
+  border-right-width: 0;
+  position:absolute;
+  top:0;
+  left:50px;
+  bottom:50px;
+  right: 0;
+}
+.score2-box.last{
+  left:33px;
+  right: 33px;
+  border-right-width : 1px;
+}
+.score3-box{
+  position:absolute;
+  top:0;
+  left:66px;
+  bottom:50px;
+  right: 0;
+  border-bottom:1px solid #444444;
+}
+.running-total{
+  position:absolute;
+  top:50px;
+  left:0;
+  bottom:0;
+  right: 0;
+}
