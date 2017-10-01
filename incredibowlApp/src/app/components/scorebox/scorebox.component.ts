@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {Frame} from './Model/frame.model';
 import {LastFrame} from './Model/lastFrame.model';
 import * as _ from 'lodash';
-import {withIdentifier} from "codelyzer/util/astQuery";
 
 @Component({
   selector: 'app-scorebox',
@@ -177,7 +176,6 @@ export class ScoreboxComponent implements OnInit {
     console.log(_.clone(this.displayScores));
     _.each(this.displayScores, (frameIn) => {
       if (frameIn.extraBalls > 0) {
-        console.log(frameIn)
         frameIn.frameTotal += pinsDown;
       }
 
@@ -189,7 +187,7 @@ export class ScoreboxComponent implements OnInit {
       }
     });
   }
-  calculateLastFrame(){
+  calculateLastFrame() {
     const lastFrame = this.displayScores[9];
     let total = 0;
     if (lastFrame.score1 === 'X') {
@@ -211,7 +209,7 @@ export class ScoreboxComponent implements OnInit {
     else if (lastFrame.score2 === '-') {
       total += 0;
     }
-    else{
+    else {
       total += Number(lastFrame.score2);
     }
 
