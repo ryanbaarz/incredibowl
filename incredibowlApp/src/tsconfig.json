@@ -14,6 +14,7 @@
     "typeRoots": [
       "../node_modules/@types"
     ],
-    "types": ["lodash"]
+    "types": ["lodash"],
+    "skipLibCheck": true
   }
 }

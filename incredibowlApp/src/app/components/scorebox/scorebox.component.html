@@ -1,12 +1,12 @@
 <div class = "scorebox-cont" (click) = "testClick()">
   <div class="frame-cont"   *ngFor="let frame of displayScores">
-    <div *ngIf="!frame.score3">
+    <div *ngIf="!frame.hasOwnProperty('score3')">
         <div class="score1-box">{{frame.score1}}</div>
         <div class="score2-box">{{frame.score2}}</div>
         <div class="running-total">{{frame.runningTotal}}</div>
     </div>
 
-    <div *ngIf="frame.score3">
+    <div *ngIf="frame.hasOwnProperty('score3')">
       <div class="score1-box last">{{frame.score1}}</div>
       <div class="score2-box last">{{frame.score2}}</div>
       <div class="score3-box">{{frame.score3}}</div>

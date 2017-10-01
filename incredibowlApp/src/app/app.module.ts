@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ScoreboxComponent } from './scorebox/scorebox.component';
+import { ScoreboxComponent } from './components/scorebox/scorebox.component';
 
 @NgModule({
   declarations: [

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import{Frame} from "./Model/frame.model";
+import {LastFrame} from "./Model/lastFrame.model";
 import * as _ from 'lodash';
 
 @Component({
@@ -8,7 +10,7 @@ import * as _ from 'lodash';
 })
 export class ScoreboxComponent implements OnInit {
 
-  displayScores : Array<any >= [
+  /*displayScores : Array<any >= [
     {
       id:"frame1",
       score1 : "",
@@ -70,10 +72,27 @@ export class ScoreboxComponent implements OnInit {
       score3 : "1",
       runningTotal : 167
     }
-  ];
+  ];*/
+
+  displayScores : Array<Frame> = []
   constructor() { }
 
   ngOnInit() {
+    this.initiializeFrames();
+    console.log(this.displayScores);
+  }
+
+  initiializeFrames(){
+
+    _.times(9, (n)=>{
+      console.log(n);
+      this.displayScores.push(
+        new Frame("frame" + (n+1) ,"","", null)
+      )
+    });
+    this.displayScores.push(
+      new LastFrame("frame10" ,"","", "", null)
+    )
   }
 
   testClick(){
