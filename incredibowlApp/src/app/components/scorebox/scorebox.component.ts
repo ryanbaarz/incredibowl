@@ -43,7 +43,7 @@ export class ScoreboxComponent implements OnInit {
       this.ngOnInit();
     }
 
-    const currentFrame = this.frames[this.currentFrameIndex];
+    let currentFrame = this.frames[this.currentFrameIndex];
 
     currentFrame.addPinsToFrame(pinsDown);
 

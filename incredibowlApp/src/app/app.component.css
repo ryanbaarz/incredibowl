@@ -1,1 +1,15 @@
+.scorebox-layout{
+  width: 100%;
+  height: 100px;
+}
 
+.lane-layout{
+  width: 100%;
+  height: 300px;
+  margin-top:16px;
+}
+
+.ball-control-layout{
+  width: 100%;
+  height: 100px;
+}
