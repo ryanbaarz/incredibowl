@@ -1,3 +1,5 @@
+import * as _ from 'lodash';
+
 export class Frame {
   id = '';
   score1 = '';
@@ -5,6 +7,9 @@ export class Frame {
   runningTotal: number = null;
   extraBalls;
   frameTotal: number;
+  frameDone = false;
+  isLastFrame = false;
+
 
   constructor(id: string, score1: string, score2: string, runningTotal: number) {
     this.id = id;
@@ -13,5 +18,39 @@ export class Frame {
     this.runningTotal = runningTotal;
     this.extraBalls = 0;
     this.frameTotal = 0;
+  }
+
+  addPinsToFrame(pinsDown: number) {
+    this.frameTotal += pinsDown;
+
+    if (_.isEmpty(this.score1) && pinsDown !== 10) {
+      this.score1 = this.getMark(pinsDown, false); // convert pinsDown to string
+    }
+    else if (_.isEmpty(this.score2)) {
+      this.score2 = this.getMark(pinsDown, true);
+      if (!this.isLastFrame) { // if it is not the last frame go to the next one.
+        this.frameDone = true;
+      }
+    }
+  }
+
+  getMark(pins: number, canBeSpare: boolean) {
+    let retVal = pins + '';
+    if (pins === 10) {
+      this.extraBalls = 2;
+      retVal = 'X';
+    }
+    else if (canBeSpare && (Number(this.score1) + pins) === 10) {
+      this.extraBalls = 1;
+      retVal = '/';
+    }
+    else if (pins === 0) {
+      retVal = '-';
+    }
+    return retVal;
+  }
+
+  showTotal() {
+    return (this.score2 !== 'X' && this.score2 !== '/');
   }
 }
