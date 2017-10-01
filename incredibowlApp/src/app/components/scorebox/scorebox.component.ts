@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import{Frame} from "./Model/frame.model";
-import {LastFrame} from "./Model/lastFrame.model";
+import {Frame} from './Model/frame.model';
+import {LastFrame} from './Model/lastFrame.model';
 import * as _ from 'lodash';
 
 @Component({
@@ -74,36 +74,80 @@ export class ScoreboxComponent implements OnInit {
     }
   ];*/
 
-  displayScores : Array<Frame> = []
+  displayScores: Array<any>;
+  currentFrameIndex: number;
+  balls : Array<number>;
+
   constructor() { }
 
   ngOnInit() {
-    this.initiializeFrames();
+    this.initializeFrames();
     console.log(this.displayScores);
   }
 
-  initiializeFrames(){
-
-    _.times(9, (n)=>{
-      console.log(n);
+  initializeFrames() {
+    this.displayScores = [];
+    this.balls = [];
+    _.times(9, (n) => {
       this.displayScores.push(
-        new Frame("frame" + (n+1) ,"","", null)
-      )
+        new Frame('frame' + (n + 1) , '', '', null)
+      );
     });
     this.displayScores.push(
-      new LastFrame("frame10" ,"","", "", null)
-    )
+      new LastFrame('frame10' , '', '', '', null)
+    );
+
+    this.currentFrameIndex = 0;
   }
 
-  testClick(){
+  testClick() {
     this.recordBowl (5);
   }
 
-  recordBowl(pinsDown : number){
-    console.log(pinsDown);
-    _.times(pinsDown, (n)=>{
-      console.log(n)
-    })
+  recordBowl(pinsDown: number) {
+    if (this.currentFrameIndex > 9) {
+      this.initializeFrames();
+    }
+    const currentFrame = this.displayScores[this.currentFrameIndex];
+    if (_.isEmpty(currentFrame.score1) && pinsDown !== 10) {
+      currentFrame.score1 = pinsDown + ''; // convert pinsDown to string
+
+    }
+    else if (_.isEmpty(currentFrame.score2) && !currentFrame.hasOwnProperty('score3')) {
+      currentFrame.score2 = this.getMark(pinsDown, 2, currentFrame);
+      if (!currentFrame.hasOwnProperty('score3')) { // if it is not the last frame go to the next one.
+        this.currentFrameIndex += 1;
+      }
+    }
+    else if (currentFrame.hasOwnProperty('score3')) {
+      if (_.isEmpty(currentFrame.score1)) { // This is to catch the case where there is a strike on the first ball of the last strike.
+        currentFrame.score1 = this.getMark(pinsDown, 1, currentFrame);
+      }
+      else if (_.isEmpty(currentFrame.score2)) {
+        currentFrame.score2 = this.getMark(pinsDown, 2, currentFrame);
+        console.log(currentFrame.score2);
+        if (currentFrame.score2 !== 'X' && currentFrame.score2 !== '/') {
+          this.currentFrameIndex += 1;
+        }
+      }
+      else {
+        currentFrame.score3 = this.getMark(pinsDown, 3, currentFrame);
+        this.currentFrameIndex += 1;
+      }
+
+
+    }
+  }
+
+  getMark(pins: number, scoreIndex: number, frame: any) {
+    let retVal = pins + '';
+    if (pins === 10) {
+      retVal = 'X';
+    }
+    else if (scoreIndex === 2 && (Number(frame.score1) + pins) === 10) {
+      retVal = '/';
+    }
+    return retVal;
   }
 
 }
