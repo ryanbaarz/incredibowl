@@ -5,8 +5,8 @@ export class Frame {
   score1 = '';
   score2 = '';
   runningTotal: number = null;
-  extraBalls;
-  frameTotal: number;
+  extraBalls = 0;
+  frameTotal = 0;
   frameDone = false;
   isLastFrame = false;
 
@@ -16,8 +16,6 @@ export class Frame {
     this.score1 = score1;
     this.score2 = score2;
     this.runningTotal = runningTotal;
-    this.extraBalls = 0;
-    this.frameTotal = 0;
   }
 
   addPinsToFrame(pinsDown: number) {
