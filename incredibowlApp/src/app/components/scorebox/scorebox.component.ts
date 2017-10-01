@@ -76,7 +76,7 @@ export class ScoreboxComponent implements OnInit {
 
   displayScores: Array<any>;
   currentFrameIndex: number;
-  balls : Array<number>;
+  balls: Array<number>;
 
   constructor() { }
 
@@ -101,50 +101,51 @@ export class ScoreboxComponent implements OnInit {
   }
 
   testClick() {
-    this.recordBowl (5);
+    this.recordBowl (4);
   }
 
   recordBowl(pinsDown: number) {
     if (this.currentFrameIndex > 9) {
       this.initializeFrames();
     }
-    const currentFrame = this.displayScores[this.currentFrameIndex];
+    const currentFrame = this.displayScores[this.currentFrameIndex],
+          isLastFrame = currentFrame.hasOwnProperty('score3');
     if (_.isEmpty(currentFrame.score1) && pinsDown !== 10) {
       currentFrame.score1 = pinsDown + ''; // convert pinsDown to string
-
     }
-    else if (_.isEmpty(currentFrame.score2) && !currentFrame.hasOwnProperty('score3')) {
-      currentFrame.score2 = this.getMark(pinsDown, 2, currentFrame);
-      if (!currentFrame.hasOwnProperty('score3')) { // if it is not the last frame go to the next one.
+    else if (_.isEmpty(currentFrame.score2) && !isLastFrame) {
+      currentFrame.score2 = this.getMark(pinsDown, currentFrame, true);
+      if (!isLastFrame) { // if it is not the last frame go to the next one.
         this.currentFrameIndex += 1;
       }
     }
-    else if (currentFrame.hasOwnProperty('score3')) {
-      if (_.isEmpty(currentFrame.score1)) { // This is to catch the case where there is a strike on the first ball of the last strike.
-        currentFrame.score1 = this.getMark(pinsDown, 1, currentFrame);
-      }
-      else if (_.isEmpty(currentFrame.score2)) {
-        currentFrame.score2 = this.getMark(pinsDown, 2, currentFrame);
-        console.log(currentFrame.score2);
-        if (currentFrame.score2 !== 'X' && currentFrame.score2 !== '/') {
-          this.currentFrameIndex += 1;
-        }
-      }
-      else {
-        currentFrame.score3 = this.getMark(pinsDown, 3, currentFrame);
-        this.currentFrameIndex += 1;
-      }
-
-
+    else if (isLastFrame) {
+      this.recordLastFrame(pinsDown , currentFrame);
     }
   }
 
-  getMark(pins: number, scoreIndex: number, frame: any) {
+  recordLastFrame(pinsDown: number, currentFrame: any) {
+    if (_.isEmpty(currentFrame.score1)) { // This is to catch the case where there is a strike on the first ball of the last strike.
+      currentFrame.score1 = this.getMark(pinsDown, currentFrame, false);
+    }
+    else if (_.isEmpty(currentFrame.score2)) {
+      currentFrame.score2 = this.getMark(pinsDown, currentFrame, true);
+      if (currentFrame.score2 !== 'X' && currentFrame.score2 !== '/') {
+        this.currentFrameIndex += 1;
+      }
+    }
+    else {
+      currentFrame.score3 = this.getMark(pinsDown, currentFrame, false);
+      this.currentFrameIndex += 1;
+    }
+  }
+
+  getMark(pins: number, frame: any, canBeSpare: boolean) {
     let retVal = pins + '';
     if (pins === 10) {
       retVal = 'X';
     }
-    else if (scoreIndex === 2 && (Number(frame.score1) + pins) === 10) {
+    else if (canBeSpare && (Number(frame.score1) + pins) === 10) {
       retVal = '/';
     }
     return retVal;
