@@ -77,6 +77,12 @@ export class ScoreboxComponent implements OnInit {
   displayScores: Array<any>;
   currentFrameIndex: number;
   currentScore: number;
+  markMap: any = {
+    'X' : 10,
+    '/' : null,
+    '-' : 0,
+    '' : 0
+  };
 
   constructor() { }
 
@@ -101,7 +107,7 @@ export class ScoreboxComponent implements OnInit {
   }
 
   testClick() {
-    this.recordBowl (3);
+    this.recordBowl (10);
   }
 
   recordBowl(pinsDown: number) {
@@ -122,13 +128,51 @@ export class ScoreboxComponent implements OnInit {
       currentFrame.score2 = this.getMark(pinsDown, currentFrame, true);
       if (!isLastFrame) { // if it is not the last frame go to the next one.
         this.currentFrameIndex += 1;
-        this.calculateFrameScore(pinsDown, currentFrame);
+        this.calculateFrameScore(currentFrame);
       }
     }
     else if (isLastFrame) {
       this.recordLastFrame(pinsDown , currentFrame);
     }
 
+  }
+
+  getMark(pins: number, frame: any, canBeSpare: boolean) {
+    let retVal = pins + '';
+    if (pins === 10) {
+      frame.extraBalls = 2;
+      retVal = 'X';
+    }
+    else if (canBeSpare && (Number(frame.score1) + pins) === 10) {
+      frame.extraBalls = 1;
+      retVal = '/';
+    }
+    else if (pins === 0) {
+      retVal = '-';
+    }
+    return retVal;
+  }
+
+  calculateFrameScore(currentFrame: any) {
+    if ((currentFrame.score2 !== 'X' && currentFrame.score2 !== '/')) {
+      this.currentScore += currentFrame.frameTotal;
+      currentFrame.runningTotal = this.currentScore;
+    }
+  }
+
+  updatePendingFrames(pinsDown: number) {
+    _.each(this.displayScores, (frameIn) => {
+      if (frameIn.extraBalls > 0) {
+        frameIn.frameTotal += pinsDown;
+      }
+
+      frameIn.extraBalls -= 1;
+
+      if (frameIn.extraBalls === 0 && !frameIn.hasOwnProperty('score3')) {// No extra Balls and Not the last frame.
+        this.currentScore += frameIn.frameTotal;
+        frameIn.runningTotal = this.currentScore;
+      }
+    });
   }
 
   recordLastFrame(pinsDown: number, currentFrame: any) {
@@ -149,79 +193,14 @@ export class ScoreboxComponent implements OnInit {
     }
   }
 
-  getMark(pins: number, frame: any, canBeSpare: boolean) {
-    let retVal = pins + '';
-    if (pins === 10) {
-      frame.extraBalls = 2;
-      retVal = 'X';
-    }
-    else if (canBeSpare && (Number(frame.score1) + pins) === 10) {
-      frame.extraBalls = 1;
-      retVal = '/';
-    }
-    else if (pins === 0) {
-      retVal = '-';
-    }
-    return retVal;
-  }
-
-  calculateFrameScore(pinsDown: number, currentFrame: any) {
-    if ((currentFrame.score2 !== 'X' && currentFrame.score2 !== '/')) {
-      this.currentScore += currentFrame.frameTotal;
-      currentFrame.runningTotal = this.currentScore;
-    }
-  }
-
-  updatePendingFrames(pinsDown: number) {
-    console.log(_.clone(this.displayScores));
-    _.each(this.displayScores, (frameIn) => {
-      if (frameIn.extraBalls > 0) {
-        frameIn.frameTotal += pinsDown;
-      }
-
-      frameIn.extraBalls -= 1;
-
-      if (frameIn.extraBalls === 0 && !frameIn.hasOwnProperty('score3')) {// No extra Balls and Not the last frame.
-        this.currentScore += frameIn.frameTotal;
-        frameIn.runningTotal = this.currentScore;
-      }
-    });
-  }
   calculateLastFrame() {
     const lastFrame = this.displayScores[9];
+    this.markMap['/'] = 10 - Number(lastFrame.score1);
+
     let total = 0;
-    if (lastFrame.score1 === 'X') {
-      total += 10;
-    }
-    else if (lastFrame.score1 === '-' ) {
-      total += 0;
-    }
-    else {
-      total += Number(lastFrame.score1);
-    }
-
-    if (lastFrame.score2 === 'X') {
-      total += 10;
-    }
-    else if (lastFrame.score2 === '/') {
-      total += 10 - Number(lastFrame.score1);
-    }
-    else if (lastFrame.score2 === '-') {
-      total += 0;
-    }
-    else {
-      total += Number(lastFrame.score2);
-    }
-
-    if (lastFrame.score3 === 'X') {
-      total += 10;
-    }
-    else if (lastFrame.score3 === '-') {
-      total += 0;
-    }
-    else {
-      total += Number(lastFrame.score3);
-    }
+    total += (_.isNumber(this.markMap[lastFrame.score1])) ? this.markMap[lastFrame.score1] : Number(lastFrame.score1);
+    total += (_.isNumber(this.markMap[lastFrame.score2])) ? this.markMap[lastFrame.score2] : Number(lastFrame.score2);
+    total += (_.isNumber(this.markMap[lastFrame.score3])) ? this.markMap[lastFrame.score3] : Number(lastFrame.score3);
 
     lastFrame.frameTotal = total;
     this.currentScore += lastFrame.frameTotal;
