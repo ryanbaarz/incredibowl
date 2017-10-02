@@ -25,3 +25,16 @@ my npm version was : 3.10.9
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+
+## Where to look to inspect the code
+Most of the good stuff is in the /src/app directory
+You will find the entry point as the app.component which contains the layout and game control
+it includes a couple of components from the components directory like
+the score box and lane. 
+
+
+## GamePlay
+Click the big button to start a roll,
+When the ball is horizontally aligned with where you want to bowl it 
+click the ball control container again to roll it. 
