@@ -179,9 +179,10 @@ var ScoreboxComponent = (function () {
         this.frames.push(new __WEBPACK_IMPORTED_MODULE_2__Model_lastFrame_model__["a" /* LastFrame */]('frame10', '', '', '', null));
     };
     ScoreboxComponent.prototype.testClick = function () {
-        this.recordBowl(3);
-        this.recordBowl(3);
-        this.recordBowl(10);
+        /*
+          this is a good little function for testing I can just click to run record bowl with a pinCount
+          this.recordBowl (3);
+         */
     };
     ScoreboxComponent.prototype.recordBowl = function (pinsDown) {
         if (this.currentFrameIndex > 9) {

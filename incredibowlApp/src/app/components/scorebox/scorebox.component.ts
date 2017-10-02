@@ -35,9 +35,11 @@ export class ScoreboxComponent implements OnInit {
   }
 
   testClick() {
-    this.recordBowl (3);
-    this.recordBowl (3);
-    this.recordBowl (10);
+    /*
+      this is a good little function for testing I can just click to run record bowl with a pinCount
+      this.recordBowl (3);
+     */
+
   }
 
   recordBowl(pinsDown: number) {
