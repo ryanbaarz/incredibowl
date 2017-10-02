@@ -14,7 +14,7 @@
     "typeRoots": [
       "../node_modules/@types"
     ],
-    "types": ["lodash"],
+    "types": ["jquery","lodash"],
     "skipLibCheck": true
   }
 }
