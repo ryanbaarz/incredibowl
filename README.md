@@ -1,2 +1,2 @@
 # incredibowl
-A simple bowling app for the browser
+the good stuff is in the incredibowlApp directory
