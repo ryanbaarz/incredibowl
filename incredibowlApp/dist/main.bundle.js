@@ -5,8 +5,8 @@ webpackJsonp([1,4],{
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Model_pin_model__ = __webpack_require__(459);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pinMap__ = __webpack_require__(460);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Model_pin_model__ = __webpack_require__(458);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pinMap__ = __webpack_require__(459);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash__ = __webpack_require__(147);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_lodash__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LaneComponent; });
@@ -64,8 +64,8 @@ var LaneComponent = (function () {
     LaneComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-lane',
-            template: __webpack_require__(624),
-            styles: [__webpack_require__(620)]
+            template: __webpack_require__(621),
+            styles: [__webpack_require__(618)]
         }),
         __metadata("design:paramtypes", [])
     ], LaneComponent);
@@ -145,7 +145,7 @@ var Frame = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Model_frame_model__ = __webpack_require__(303);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Model_lastFrame_model__ = __webpack_require__(461);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Model_lastFrame_model__ = __webpack_require__(460);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash__ = __webpack_require__(147);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_lodash__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ScoreboxComponent; });
@@ -217,8 +217,8 @@ var ScoreboxComponent = (function () {
     ScoreboxComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-scorebox',
-            template: __webpack_require__(625),
-            styles: [__webpack_require__(621)]
+            template: __webpack_require__(622),
+            styles: [__webpack_require__(619)]
         }),
         __metadata("design:paramtypes", [])
     ], ScoreboxComponent);
@@ -250,7 +250,7 @@ webpackEmptyContext.id = 347;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(436);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(462);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(461);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(457);
 
 
@@ -271,7 +271,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_scorebox_scorebox_component__ = __webpack_require__(304);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_lane_lane_component__ = __webpack_require__(302);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(616);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__(615);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jquery__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -342,8 +342,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-root',
-            template: __webpack_require__(622),
-            styles: [__webpack_require__(618)]
+            template: __webpack_require__(620),
+            styles: [__webpack_require__(617)]
         }),
         __metadata("design:paramtypes", [])
     ], AppComponent);
@@ -365,8 +365,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(432);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(456);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_scorebox_scorebox_component__ = __webpack_require__(304);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_ball_controller_ball_controller_component__ = __webpack_require__(458);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_lane_lane_component__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_lane_lane_component__ = __webpack_require__(302);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -374,7 +373,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -390,8 +388,7 @@ var AppModule = (function () {
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_5__components_scorebox_scorebox_component__["a" /* ScoreboxComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__components_ball_controller_ball_controller_component__["a" /* BallControllerComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__components_lane_lane_component__["a" /* LaneComponent */]
+                __WEBPACK_IMPORTED_MODULE_6__components_lane_lane_component__["a" /* LaneComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -410,46 +407,6 @@ var AppModule = (function () {
 /***/ }),
 
 /***/ 458:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BallControllerComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var BallControllerComponent = (function () {
-    function BallControllerComponent() {
-        this.latestBall = 0;
-    }
-    BallControllerComponent.prototype.ngOnInit = function () {
-    };
-    BallControllerComponent.prototype.generateRoll = function () {
-        this.latestBall = Math.random();
-    };
-    BallControllerComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
-            selector: 'app-ball-controller',
-            template: __webpack_require__(623),
-            styles: [__webpack_require__(619)]
-        }),
-        __metadata("design:paramtypes", [])
-    ], BallControllerComponent);
-    return BallControllerComponent;
-}());
-
-//# sourceMappingURL=/Users/rbaarz/home/incredibowl/incredibowl/incredibowlApp/src/ball-controller.component.js.map
-
-/***/ }),
-
-/***/ 459:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -477,7 +434,7 @@ var Pin = (function () {
 
 /***/ }),
 
-/***/ 460:
+/***/ 459:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -608,7 +565,7 @@ var PinMap = (function () {
 
 /***/ }),
 
-/***/ 461:
+/***/ 460:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -671,7 +628,7 @@ var LastFrame = (function (_super) {
 
 /***/ }),
 
-/***/ 462:
+/***/ 461:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -687,63 +644,49 @@ var environment = {
 
 /***/ }),
 
+/***/ 617:
+/***/ (function(module, exports) {
+
+module.exports = ".incredibowl-layout{\n  width:1020px;\n  margin:auto;\n}\n.scorebox-layout{\n  width: 100%;\n  height: 100px;\n}\n\n.lane-layout{\n  width: 100%;\n  height: 300px;\n  margin-top:16px;\n}\n\n.ball-control-layout{\n  width: 100%;\n  height: 100px;\n}\n\n.ball-controller-cont{\n  width:1000px;\n  height:100px;\n}\n\n.ball-controller-panel{\n  width:400px;\n  height: 80px;\n  background-color: #EEEEEE;\n  margin: auto;\n  position:relative;\n  padding-top: 16px;\n  padding-bottom: 16px;\n}\n\n.bowling-ball {\n  height:80px;\n  width: 80px;\n  border-radius: 40px;\n  background-color: #ff8200;\n}\n\n.callToAction{\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #444444;\n  color: white;\n  text-align: center;\n  line-height:116px;\n  font-size: 30px;\n  cursor: pointer\n}\n"
+
+/***/ }),
+
 /***/ 618:
-/***/ (function(module, exports) {
-
-module.exports = ".scorebox-layout{\n  width: 100%;\n  height: 100px;\n}\n\n.lane-layout{\n  width: 100%;\n  height: 300px;\n  margin-top:16px;\n}\n\n.ball-control-layout{\n  width: 100%;\n  height: 100px;\n}\n\n.ball-controller-cont{\n  width:1000px;\n  height:100px;\n}\n\n.ball-controller-panel{\n  width:400px;\n  height: 80px;\n  background-color: #EEEEEE;\n  margin: auto;\n  position:relative;\n  padding-top: 16px;\n  padding-bottom: 16px;\n}\n\n.bowling-ball {\n  height:80px;\n  width: 80px;\n  border-radius: 40px;\n  background-color: #ff8200;\n}\n\n.callToAction{\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #444444;\n  color: white;\n  text-align: center;\n  line-height:116px;\n  font-size: 30px;\n  cursor: pointer\n}\n"
-
-/***/ }),
-
-/***/ 619:
-/***/ (function(module, exports) {
-
-module.exports = ".ball-controller-cont{\n  width:1000px;\n  height:100px;\n}\n.ball-controller-panel{\n  width:300px;\n  height: 50px;\n  background-color: blue;\n  margin: auto;\n}\n"
-
-/***/ }),
-
-/***/ 620:
 /***/ (function(module, exports) {
 
 module.exports = ".lane-container{\n  width:1000px;\n  height:300px;\n}\n.pins-container{\n  width:300px;\n  height:300px;\n  margin: auto;\n  position:relative;\n}\n\n.pin{\n  height:50px;\n  width:50px;\n  background-color: #444444;\n  border-radius :25px;\n  position: absolute;\n  box-sizing: border-box;\n}\n.pin.down{\n  background-color: white;\n  border: 4px solid #444444;\n\n}\n\n\n"
 
 /***/ }),
 
-/***/ 621:
+/***/ 619:
 /***/ (function(module, exports) {
 
 module.exports = ".scorebox-cont{\n  line-height:50px;\n  text-align: center;\n}\n.frame-cont{\n  border : 1px solid #444444;\n  border-left-width:0;\n  width:100px;\n  height: 100px;\n  float : left;\n  position:relative;\n  font-size:20px;\n}\n.frame-cont:first-child{\n  border-left-width:1px;\n}\n.score1-box{\n  position:absolute;\n  top:0;\n  left:0;\n  bottom:50px;\n  right: 50px;\n\n}\n.score1-box.last{\n  right: 66px;\n  border-bottom:1px solid #444444;\n}\n.score2-box{\n  border : 1px solid #444444;\n  border-top-width: 0;\n  border-right-width: 0;\n  position:absolute;\n  top:0;\n  left:50px;\n  bottom:50px;\n  right: 0;\n}\n.score2-box.last{\n  left:33px;\n  right: 33px;\n  border-right-width : 1px;\n}\n.score3-box{\n  position:absolute;\n  top:0;\n  left:66px;\n  bottom:50px;\n  right: 0;\n  border-bottom:1px solid #444444;\n}\n.running-total{\n  position:absolute;\n  top:50px;\n  left:0;\n  bottom:0;\n  right: 0;\n}\n"
 
 /***/ }),
 
-/***/ 622:
+/***/ 620:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"incredibowl-layout\">\n  <div class=\"scorebox-layout\">\n    <app-scorebox></app-scorebox>\n  </div>\n  <div class=\"lane-layout\">\n    <app-lane></app-lane>\n  </div>\n  <div class=\"ball-control-layout\">\n    <div class=\"ball-controller-cont\">\n      <div class=\"ball-controller-panel\" (click)=\"generateRoll()\">\n        <div class=\"bowling-ball\"></div>\n        <div *ngIf=\"showClickToBowl\" class=\"callToAction\" (click) = \"toggleClickToBowl($event)\">\n          Click To Bowl\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
-/***/ 623:
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"ball-controller-cont\">\n  <div class=\"ball-controller-panel\" (click)=\"generateRoll()\">\n    Click to Roll\n  </div>\n</div>\n"
-
-/***/ }),
-
-/***/ 624:
+/***/ 621:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"lane-container\">\n  <div class=\"pins-container\">\n    <div class=\"pin\" *ngFor=\"let pin of pins\"\n         [style.left.px]=\"pin.x\"\n         [style.top.px]=\"pin.y\"\n         [ngClass] = \"(pin.isDown) ? 'down' : ''\"\n    ></div>\n  </div>\n</div>\n"
 
 /***/ }),
 
-/***/ 625:
+/***/ 622:
 /***/ (function(module, exports) {
 
 module.exports = "<div class = \"scorebox-cont\" (click) = \"testClick()\">\n  <div class=\"frame-cont\"   *ngFor=\"let frame of frames\">\n    <div *ngIf=\"!frame.isLastFrame\">\n        <div class=\"score1-box\">{{frame.score1}}</div>\n        <div class=\"score2-box\">{{frame.score2}}</div>\n        <div class=\"running-total\">{{frame.runningTotal}}</div>\n    </div>\n\n    <div *ngIf=\"frame.isLastFrame\">\n      <div class=\"score1-box last\">{{frame.score1}}</div>\n      <div class=\"score2-box last\">{{frame.score2}}</div>\n      <div class=\"score3-box\">{{frame.score3}}</div>\n      <div class=\"running-total\">{{frame.runningTotal}}</div>\n    </div>\n\n  </div>\n</div>\n\n\n"
 
 /***/ }),
 
-/***/ 639:
+/***/ 636:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(348);
@@ -751,5 +694,5 @@ module.exports = __webpack_require__(348);
 
 /***/ })
 
-},[639]);
+},[636]);
 //# sourceMappingURL=main.bundle.map
