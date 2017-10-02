@@ -35,6 +35,8 @@ export class ScoreboxComponent implements OnInit {
   }
 
   testClick() {
+    this.recordBowl (3);
+    this.recordBowl (3);
     this.recordBowl (10);
   }
 
@@ -42,6 +44,8 @@ export class ScoreboxComponent implements OnInit {
     if (this.currentFrameIndex > 9) {
       this.ngOnInit();
     }
+
+    this.updatePendingFrames(pinsDown);
 
     let currentFrame = this.frames[this.currentFrameIndex];
 
@@ -54,8 +58,8 @@ export class ScoreboxComponent implements OnInit {
         currentFrame.runningTotal = this.currentScore;
       }
     }
-
-    this.updatePendingFrames(pinsDown);
+    
+    return currentFrame.frameDone;
   }
 
   updatePendingFrames(pinsDown: number) {

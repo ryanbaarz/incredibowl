@@ -14,12 +14,12 @@ export class LastFrame extends Frame {
   addPinsToFrame(pinsDown: number) {
     this.frameTotal += pinsDown;
 
-    if (_.isEmpty(this.score1)) { // This is to catch the case where there is a strike on the first ball of the last strike.
+    if (_.isEmpty(this.score1)) { // This is to catch the case where there is a strike on the first ball of the last frame.
       this.score1 = this.getMark(pinsDown, false);
     }
     else if (_.isEmpty(this.score2)) {
       this.score2 = this.getMark(pinsDown,  true);
-      if (this.score2 !== 'X' && this.score2 !== '/') {
+      if (this.score1 !== 'X' && this.score2 !== 'X' && this.score2 !== '/') {
         this.frameDone = true;
       }
     }

@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ball-controller.component.css']
 })
 export class BallControllerComponent implements OnInit {
+  latestBall = 0;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  generateRoll() {
+    this.latestBall = Math.random();
+  }
 }

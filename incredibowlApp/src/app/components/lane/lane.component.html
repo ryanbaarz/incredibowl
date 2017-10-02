@@ -1,6 +1,9 @@
 <div class="lane-container">
   <div class="pins-container">
-    <div class="pin"></div>
-    <div class="pin down"></div>
+    <div class="pin" *ngFor="let pin of pins"
+         [style.left.px]="pin.x"
+         [style.top.px]="pin.y"
+         [ngClass] = "(pin.isDown) ? 'down' : ''"
+    ></div>
   </div>
 </div>

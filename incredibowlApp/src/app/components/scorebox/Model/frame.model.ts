@@ -19,6 +19,10 @@ export class Frame {
   }
 
   addPinsToFrame(pinsDown: number) {
+    if (this.frameTotal + pinsDown > 10) {
+      pinsDown = 10 - this.frameTotal;
+    }
+
     this.frameTotal += pinsDown;
 
     if (_.isEmpty(this.score1) && pinsDown !== 10) {
@@ -34,11 +38,11 @@ export class Frame {
 
   getMark(pins: number, canBeSpare: boolean) {
     let retVal = pins + '';
-    if (pins === 10) {
+    if (pins === 10 && this.score1 !== '-') {
       this.extraBalls = 2;
       retVal = 'X';
     }
-    else if (canBeSpare && (Number(this.score1) + pins) === 10) {
+    else if (canBeSpare && ((Number(this.score1) + pins) === 10 || pins === 10)) {
       this.extraBalls = 1;
       retVal = '/';
     }
