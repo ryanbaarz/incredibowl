@@ -65,7 +65,6 @@ export class AppComponent implements AfterViewInit {
    * The score box lets us know if the pins need to be reset based on information in the frame.
    */
   generateRoll() {
-
     let randIn = this.getLuckyNumber(),
         pinsDown = this.lane.knockPinsDown(randIn),
         resetPins = this.scorebox.recordBowl(pinsDown);
