@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pin } from './Model/pin.model';
-import { PinMap} from "./pinMap";
+import { PinMap} from './pinMap';
 import * as _ from 'lodash';
 
 @Component({
