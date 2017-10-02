@@ -7,8 +7,9 @@
   </div>
   <div class="ball-control-layout">
     <div class="ball-controller-cont">
-      <div class="ball-controller-panel" (click)="generateRoll()">
+      <div class="ball-controller-panel">
         <div class="bowling-ball"></div>
+        <div class="ball-click-target" (click)="generateRoll()" ></div>
         <div *ngIf="showClickToBowl" class="callToAction" (click) = "toggleClickToBowl($event)">
           Click To Bowl
         </div>

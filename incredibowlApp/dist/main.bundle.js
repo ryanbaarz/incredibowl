@@ -76,7 +76,7 @@ var LaneComponent = (function () {
     return LaneComponent;
 }());
 
-//# sourceMappingURL=/Users/rbaarz/home/tmp/incredibowl/incredibowlApp/src/lane.component.js.map
+//# sourceMappingURL=/Users/rbaarz/home/incredibowl/incredibowl/incredibowlApp/src/lane.component.js.map
 
 /***/ }),
 
@@ -159,7 +159,7 @@ var Frame = (function () {
     return Frame;
 }());
 
-//# sourceMappingURL=/Users/rbaarz/home/tmp/incredibowl/incredibowlApp/src/frame.model.js.map
+//# sourceMappingURL=/Users/rbaarz/home/incredibowl/incredibowl/incredibowlApp/src/frame.model.js.map
 
 /***/ }),
 
@@ -271,7 +271,7 @@ var ScoreboxComponent = (function () {
     return ScoreboxComponent;
 }());
 
-//# sourceMappingURL=/Users/rbaarz/home/tmp/incredibowl/incredibowlApp/src/scorebox.component.js.map
+//# sourceMappingURL=/Users/rbaarz/home/incredibowl/incredibowl/incredibowlApp/src/scorebox.component.js.map
 
 /***/ }),
 
@@ -306,7 +306,7 @@ if (__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["a" /* enableProdMode */])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_3__app_app_module__["a" /* AppModule */]);
-//# sourceMappingURL=/Users/rbaarz/home/tmp/incredibowl/incredibowlApp/src/main.js.map
+//# sourceMappingURL=/Users/rbaarz/home/incredibowl/incredibowl/incredibowlApp/src/main.js.map
 
 /***/ }),
 
@@ -423,7 +423,7 @@ var AppComponent = (function () {
     var _a, _b;
 }());
 
-//# sourceMappingURL=/Users/rbaarz/home/tmp/incredibowl/incredibowlApp/src/app.component.js.map
+//# sourceMappingURL=/Users/rbaarz/home/incredibowl/incredibowl/incredibowlApp/src/app.component.js.map
 
 /***/ }),
 
@@ -474,7 +474,7 @@ var AppModule = (function () {
     return AppModule;
 }());
 
-//# sourceMappingURL=/Users/rbaarz/home/tmp/incredibowl/incredibowlApp/src/app.module.js.map
+//# sourceMappingURL=/Users/rbaarz/home/incredibowl/incredibowl/incredibowlApp/src/app.module.js.map
 
 /***/ }),
 
@@ -511,7 +511,7 @@ var Pin = (function () {
     return Pin;
 }());
 
-//# sourceMappingURL=/Users/rbaarz/home/tmp/incredibowl/incredibowlApp/src/pin.model.js.map
+//# sourceMappingURL=/Users/rbaarz/home/incredibowl/incredibowl/incredibowlApp/src/pin.model.js.map
 
 /***/ }),
 
@@ -648,7 +648,7 @@ var PinMap = (function () {
     return PinMap;
 }());
 
-//# sourceMappingURL=/Users/rbaarz/home/tmp/incredibowl/incredibowlApp/src/pinMap.js.map
+//# sourceMappingURL=/Users/rbaarz/home/incredibowl/incredibowl/incredibowlApp/src/pinMap.js.map
 
 /***/ }),
 
@@ -724,7 +724,7 @@ var LastFrame = (function (_super) {
     return LastFrame;
 }(__WEBPACK_IMPORTED_MODULE_0__frame_model__["a" /* Frame */]));
 
-//# sourceMappingURL=/Users/rbaarz/home/tmp/incredibowl/incredibowlApp/src/lastFrame.model.js.map
+//# sourceMappingURL=/Users/rbaarz/home/incredibowl/incredibowl/incredibowlApp/src/lastFrame.model.js.map
 
 /***/ }),
 
@@ -740,14 +740,14 @@ var LastFrame = (function (_super) {
 var environment = {
     production: false
 };
-//# sourceMappingURL=/Users/rbaarz/home/tmp/incredibowl/incredibowlApp/src/environment.js.map
+//# sourceMappingURL=/Users/rbaarz/home/incredibowl/incredibowl/incredibowlApp/src/environment.js.map
 
 /***/ }),
 
 /***/ 617:
 /***/ (function(module, exports) {
 
-module.exports = ".incredibowl-layout{\n  width:1020px;\n  margin:auto;\n}\n.scorebox-layout{\n  width: 100%;\n  height: 100px;\n}\n\n.lane-layout{\n  width: 100%;\n  height: 300px;\n  margin-top:16px;\n}\n\n.ball-control-layout{\n  width: 100%;\n  height: 100px;\n}\n\n.ball-controller-cont{\n  width:1000px;\n  height:100px;\n}\n\n.ball-controller-panel{\n  width:400px;\n  height: 80px;\n  background-color: #EEEEEE;\n  margin: auto;\n  position:relative;\n  padding-top: 16px;\n  padding-bottom: 16px;\n}\n\n.bowling-ball {\n  height:80px;\n  width: 80px;\n  border-radius: 40px;\n  background-color: #ff8200;\n}\n\n.callToAction{\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #444444;\n  color: white;\n  text-align: center;\n  line-height:116px;\n  font-size: 30px;\n  cursor: pointer\n}\n"
+module.exports = ".incredibowl-layout{\n  width:1020px;\n  margin:auto;\n}\n.scorebox-layout{\n  width: 100%;\n  height: 100px;\n}\n\n.lane-layout{\n  width: 100%;\n  height: 300px;\n  margin-top:16px;\n}\n\n.ball-control-layout{\n  width: 100%;\n  height: 100px;\n}\n\n.ball-controller-cont{\n  width:1000px;\n  height:100px;\n}\n\n.ball-controller-panel{\n  width:400px;\n  height: 80px;\n  background-color: #EEEEEE;\n  margin: auto;\n  position:relative;\n  padding-top: 16px;\n  padding-bottom: 16px;\n}\n\n.bowling-ball {\n  height:80px;\n  width: 80px;\n  border-radius: 40px;\n  background-color: #ff8200;\n}\n\n.ball-click-target{\n  cursor: pointer;\n  z-index: 1;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: transparent;\n}\n\n.callToAction{\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #444444;\n  color: white;\n  text-align: center;\n  line-height:116px;\n  font-size: 30px;\n  cursor: pointer;\n  z-index: 2;\n}\n\n\n"
 
 /***/ }),
 
@@ -768,7 +768,7 @@ module.exports = ".scorebox-cont{\n  line-height:50px;\n  text-align: center;\n}
 /***/ 620:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"incredibowl-layout\">\n  <div class=\"scorebox-layout\">\n    <app-scorebox></app-scorebox>\n  </div>\n  <div class=\"lane-layout\">\n    <app-lane></app-lane>\n  </div>\n  <div class=\"ball-control-layout\">\n    <div class=\"ball-controller-cont\">\n      <div class=\"ball-controller-panel\" (click)=\"generateRoll()\">\n        <div class=\"bowling-ball\"></div>\n        <div *ngIf=\"showClickToBowl\" class=\"callToAction\" (click) = \"toggleClickToBowl($event)\">\n          Click To Bowl\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"incredibowl-layout\">\n  <div class=\"scorebox-layout\">\n    <app-scorebox></app-scorebox>\n  </div>\n  <div class=\"lane-layout\">\n    <app-lane></app-lane>\n  </div>\n  <div class=\"ball-control-layout\">\n    <div class=\"ball-controller-cont\">\n      <div class=\"ball-controller-panel\">\n        <div class=\"bowling-ball\"></div>\n        <div class=\"ball-click-target\" (click)=\"generateRoll()\" ></div>\n        <div *ngIf=\"showClickToBowl\" class=\"callToAction\" (click) = \"toggleClickToBowl($event)\">\n          Click To Bowl\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
