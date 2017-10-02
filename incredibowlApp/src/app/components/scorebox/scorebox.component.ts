@@ -59,7 +59,7 @@ export class ScoreboxComponent implements OnInit {
       }
     }
 
-    return currentFrame.frameDone;
+    return (currentFrame.frameDone || currentFrame.resetPins);
   }
 
   updatePendingFrames(pinsDown: number) {

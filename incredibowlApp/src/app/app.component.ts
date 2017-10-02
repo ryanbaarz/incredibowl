@@ -50,10 +50,10 @@ export class AppComponent implements AfterViewInit {
   generateRoll() {
     let randIn = this.getLuckyNumber(),
         pinsDown = this.lane.knockPinsDown(randIn),
-        frameDone = this.scorebox.recordBowl(pinsDown);
+        resetPins = this.scorebox.recordBowl(pinsDown);
 
     this.toggleClickToBowl(null);
-    if (frameDone) {
+    if (resetPins) {
       setTimeout(() => {
         this.lane.setPins();
       }, 1000); // give the user a chance to see the pins knocked down

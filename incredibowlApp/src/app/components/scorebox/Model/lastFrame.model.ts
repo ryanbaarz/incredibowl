@@ -5,6 +5,7 @@ import * as _ from 'lodash';
 export class LastFrame extends Frame {
   score3 = '';
   isLastFrame = true;
+  resetPins = false;
 
   constructor(id: string, score1: string, score2: string, score3: string, runningTotal: number) {
     super(id, score1, score2, runningTotal);
@@ -13,14 +14,21 @@ export class LastFrame extends Frame {
 
   addPinsToFrame(pinsDown: number) {
     this.frameTotal += pinsDown;
+    this.resetPins = false;
 
     if (_.isEmpty(this.score1)) { // This is to catch the case where there is a strike on the first ball of the last frame.
       this.score1 = this.getMark(pinsDown, false);
+      if (this.score1 === 'X') {
+        this.resetPins = true;
+      }
     }
     else if (_.isEmpty(this.score2)) {
       this.score2 = this.getMark(pinsDown,  true);
       if (this.score1 !== 'X' && this.score2 !== 'X' && this.score2 !== '/') {
         this.frameDone = true;
+      }
+      else if (this.score2 === 'X' || this.score2 === '/') {
+        this.resetPins = true;
       }
     }
     else {
