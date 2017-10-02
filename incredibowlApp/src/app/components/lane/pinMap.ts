@@ -1,4 +1,10 @@
 export class PinMap {
+  /**
+   * I pulled this out of thin air just my best guess the numbers 1-10 represent a ball position
+   * 1 is left most 5 6 are center 10 is rightMost, the values for the keys are a probability
+   * that the pin will be knocked down by ball in that position.
+   * @returns Array
+   */
   public static returnMap () {
     return [
       { // pin 1

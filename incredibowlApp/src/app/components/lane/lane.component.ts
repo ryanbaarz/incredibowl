@@ -15,13 +15,16 @@ export class LaneComponent implements OnInit {
   startingX = 125;
   pinWidth = 80;
   pinHeight = 60;
-  pinRows = [2, 4, 7];
+  pinRows = [2, 4, 7]; // these are the pins where new rows start in a traditional bowling layout
   constructor() { }
 
   ngOnInit() {
     this.setPins();
   }
 
+  /**
+   * Generates and sets pins with X and Y values to position them in a Pyramid layout
+   */
   setPins() {
     let currentX = this.startingX,
         currentY = this.startingY,
@@ -43,7 +46,8 @@ export class LaneComponent implements OnInit {
   }
 
   /**
-   * ballIn is a random Number between 1 and 10 that will influence how the pins are knocked down
+   * ballIn is a Number between 1 and 10 that will influence how the pins are knocked down based on the
+   * horizontal position of the ball. 1 is left 10 is right 5 and 6 are right in the middle.
    * @param {number} ballIn
    */
   knockPinsDown(ballIn: number) {

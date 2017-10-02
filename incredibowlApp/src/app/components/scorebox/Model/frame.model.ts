@@ -18,7 +18,14 @@ export class Frame {
     this.runningTotal = runningTotal;
   }
 
+  /**
+   * based on which scores have already been recorded on the frame we find out where to
+   * record the pinsDown. It also updates the running total for the frame
+   *
+   * @param {number} pinsDown
+   */
   addPinsToFrame(pinsDown: number) {
+    // This block is to catch any situations where our total goes above 10 for some reason we will fake it in the players favor.
     if (this.frameTotal + pinsDown > 10) {
       pinsDown = 10 - this.frameTotal;
     }
@@ -36,6 +43,15 @@ export class Frame {
     }
   }
 
+  /**
+   * returns the pretty value for the number of pins Rolled. It also discovers if a frame
+   * has had a X or / and should get extra balls on the frame.
+   *
+   * @param {number} pins
+   * @param {boolean} canBeSpare
+   * @returns {string}
+   */
+
   getMark(pins: number, canBeSpare: boolean) {
     let retVal = pins + '';
     if (pins === 10 && this.score1 !== '-') {
@@ -52,6 +68,11 @@ export class Frame {
     return retVal;
   }
 
+  /**
+   * returns weather or not the total should be shown in the case of X or / the frame should
+   * be blank until extra points are added later.
+   * @returns {boolean}
+   */
   showTotal() {
     return (this.score2 !== 'X' && this.score2 !== '/');
   }

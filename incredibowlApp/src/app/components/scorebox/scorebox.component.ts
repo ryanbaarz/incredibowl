@@ -22,6 +22,9 @@ export class ScoreboxComponent implements OnInit {
     this.initializeFrames();
   }
 
+  /**
+   * creates an Array of 10 Frames where then final Frame is a LastFrame
+   */
   initializeFrames() {
     this.frames = [];
     _.times(9, (n) => {
@@ -42,6 +45,18 @@ export class ScoreboxComponent implements OnInit {
 
   }
 
+  /**
+   * Send the number of Pins down in and we will go through and add the pins to any frames that are still
+   * awaiting extra pins because they were spares or strikes, Then we add the pins to Frame that is currently
+   * being played. From that interaction the Frame will know weather or not the Frame is done or if it needs to
+   * reset the pins like in the last frame when you mark on ball 1 or 2.
+   *
+   * It returns weather or not the pins should be reset.
+   *
+   * If the frame is done it advances the scorebox to the next frame.
+   * @param {number} pinsDown
+   * @returns {boolean}
+   */
   recordBowl(pinsDown: number) {
     if (this.currentFrameIndex > 9) {
       this.ngOnInit();
@@ -64,6 +79,12 @@ export class ScoreboxComponent implements OnInit {
     return (currentFrame.frameDone || currentFrame.resetPins);
   }
 
+  /**
+   * Goes through each of the frames searching for frames that are awaiting extra points because
+   * the frame had a strike or a spare. Adds extra points and if there are no more extra points to
+   * wait for it displays the running score.
+   * @param {number} pinsDown
+   */
   updatePendingFrames(pinsDown: number) {
     _.each(this.frames, (frameIn) => {
       if (!frameIn.isLastFrame) {
