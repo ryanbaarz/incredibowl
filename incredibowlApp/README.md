@@ -6,7 +6,9 @@ You can go to the /dist diretory and run
 
 `python -m SimpleHTTPServer 8008`
 
-Incredibowl will run on localhost 8008;
+Incredibowl will run on `http://localhost:8008`
+
+OR
 
 If you would like to run the project yourself using the angular CLI
 IncredibowlApp directory where the package.js is and run
@@ -14,6 +16,8 @@ IncredibowlApp directory where the package.js is and run
 `npm install`
 
 `npm start` 
+
+the app will run on `http://localhost:4200`
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 my node version was : 7.1.0
