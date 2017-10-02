@@ -58,7 +58,7 @@ export class ScoreboxComponent implements OnInit {
         currentFrame.runningTotal = this.currentScore;
       }
     }
-    
+
     return currentFrame.frameDone;
   }
 

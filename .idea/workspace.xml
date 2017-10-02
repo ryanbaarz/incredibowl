@@ -2,18 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7a3b523-5448-42e7-b3f5-02cae2dc9631" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incredibowlApp/src/app/app.component.css" afterPath="$PROJECT_DIR$/incredibowlApp/src/app/app.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incredibowlApp/src/app/app.component.html" afterPath="$PROJECT_DIR$/incredibowlApp/src/app/app.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incredibowlApp/src/app/app.component.ts" afterPath="$PROJECT_DIR$/incredibowlApp/src/app/app.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incredibowlApp/src/app/components/ball-controller/ball-controller.component.html" afterPath="$PROJECT_DIR$/incredibowlApp/src/app/components/ball-controller/ball-controller.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incredibowlApp/src/app/components/ball-controller/ball-controller.component.ts" afterPath="$PROJECT_DIR$/incredibowlApp/src/app/components/ball-controller/ball-controller.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incredibowlApp/src/app/components/lane/Model/pin.model.ts" afterPath="$PROJECT_DIR$/incredibowlApp/src/app/components/lane/Model/pin.model.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incredibowlApp/src/app/components/lane/lane.component.css" afterPath="$PROJECT_DIR$/incredibowlApp/src/app/components/lane/lane.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incredibowlApp/src/app/components/lane/lane.component.html" afterPath="$PROJECT_DIR$/incredibowlApp/src/app/components/lane/lane.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incredibowlApp/src/app/components/lane/lane.component.ts" afterPath="$PROJECT_DIR$/incredibowlApp/src/app/components/lane/lane.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incredibowlApp/src/app/components/scorebox/Model/frame.model.ts" afterPath="$PROJECT_DIR$/incredibowlApp/src/app/components/scorebox/Model/frame.model.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incredibowlApp/src/app/components/scorebox/Model/lastFrame.model.ts" afterPath="$PROJECT_DIR$/incredibowlApp/src/app/components/scorebox/Model/lastFrame.model.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incredibowlApp/src/app/components/scorebox/scorebox.component.ts" afterPath="$PROJECT_DIR$/incredibowlApp/src/app/components/scorebox/scorebox.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -60,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pinMap.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pinMap.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/incredibowlApp/src/app/components/lane/pinMap.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1695">
-              <caret line="113" column="14" lean-forward="false" selection-start-line="113" selection-start-column="14" selection-end-line="113" selection-end-column="14" />
+            <state relative-caret-position="60">
+              <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -90,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scorebox.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scorebox.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/incredibowlApp/src/app/components/scorebox/scorebox.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+            <state relative-caret-position="884">
+              <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -151,8 +139,8 @@
       <find>calculateLastFrame</find>
       <find>displayScores</find>
       <find>const</find>
-      <find>show</find>
       <find>startingX</find>
+      <find>show</find>
     </findStrings>
     <replaceStrings>
       <replace>score2</replace>
@@ -433,12 +421,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1506778767249</updated>
-      <workItem from="1506778771429" duration="46947000" />
+      <workItem from="1506778771429" duration="47059000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46947000" />
+    <option name="totallyTimeSpent" value="47059000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="170" y="23" width="1270" height="777" extended-state="0" />
@@ -734,14 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/incredibowlApp/src/app/components/lane/pinMap.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1695">
-          <caret line="113" column="14" lean-forward="false" selection-start-line="113" selection-start-column="14" selection-end-line="113" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/incredibowlApp/src/app/components/scorebox/Model/lastFrame.model.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -788,11 +768,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/incredibowlApp/src/app/components/scorebox/scorebox.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+        <state relative-caret-position="884">
+          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/incredibowlApp/src/app/components/lane/pinMap.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
